@@ -51,7 +51,7 @@ public class Demo {
 		
 		List<String> listItems = new ArrayList<String>();
 		listItems.add("taylor.tackett@basised.com");
-		listItems.add("L57s21rq1!");
+		listItems.add("");
 		listItems.add("title");
 		listItems.add("body");
 		listItems.add("type");
