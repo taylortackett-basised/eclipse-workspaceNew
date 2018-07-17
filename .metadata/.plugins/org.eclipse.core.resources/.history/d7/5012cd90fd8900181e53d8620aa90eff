@@ -1,0 +1,62 @@
+import java.io.FileReader;
+import java.util.Iterator;
+import java.util.List;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+ 
+import au.com.bytecode.opencsv.CSVReader;
+ 
+public class ReadCsvFiles {
+ 
+	public static void main(String[] args) throws Exception {
+
+		// This will load csv file 
+		CSVReader reader = new CSVReader(new FileReader("C:\\Users\\taylor.tackett\\csvs\\test.csv"));
+		
+		// This will prep our writer
+		PrintWriter pw = new PrintWriter(new File("C:\\Users\\taylor.tackett\\csvs\\csvData.csv"));
+        StringBuilder sb = new StringBuilder();
+        
+		// this will load content into list
+		List<String[]> li=reader.readAll();
+		System.out.println("Total rows which we have is "+li.size());
+
+		// create Iterator reference
+		Iterator<String[]>i1= li.iterator();
+		int row = 1;
+
+		// Iterate all values 
+		while(i1.hasNext()){
+			String[] str=i1.next();
+			
+			System.out.print("Row " + row + ": ");
+			row++;
+			for(int i=0;i<str.length;i++)
+			{
+				sb.append(str[i]+',');
+				System.out.print("|"+str[i]+"|");
+			}
+			System.out.println(" \n");
+
+
+		}
+		
+
+        sb.append("id");
+        sb.append(',');
+        sb.append("Name");
+        sb.append('\n');
+
+        sb.append("1");
+        sb.append(',');
+        sb.append("Prashant Ghimire");
+        sb.append('\n');
+
+        pw.write(sb.toString());
+        pw.close();
+        System.out.println("done!");
+
+	}
+
+}

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.io.File;
 import java.lang.Object;
 import org.apache.commons.csv.*;
@@ -15,11 +16,8 @@ public class Demo {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		/* CSV STUFF */
-//		File csvData = new File("C:\\Users\\taylor.tackett\\csvs\\csvData.xlsx");
-//		CSVParser parser = CSVParser.parse(csvData, CSVFormat.EXCEL);
-//		for (CSVRecord csvRecord : parser) {
-//		     
-//		} 
+
+		
 			
 		/* Class name = X
 				X driver = new X(); */
@@ -31,6 +29,7 @@ public class Demo {
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 		WebDriver driver = new ChromeDriver(capabilities);
+		
 
 		//WebDriver driver = new ChromeDriver();
 		
@@ -57,16 +56,18 @@ public class Demo {
 		listItems.add("body");
 		listItems.add("type");
 		
+		
+		
 		final CharSequence[] charSequenceItems = listItems.toArray(new CharSequence[listItems.size()]);
 		
-		
-		
 		driver.get("https://basis-ed.myshopify.com/admin/");
+		  driver.manage().window().maximize();
+
 		driver.findElement(By.id("Login")).sendKeys(charSequenceItems[0]);
 		driver.findElement(By.id("Password")).sendKeys(charSequenceItems[1]);
 		driver.findElement(By.id("LoginSubmit")).click();
 		driver.findElement(By.xpath("//*[@id='AppFrameNav']/nav/div[2]/div/ul[1]/li[3]/a/span")).click();
-		driver.getCurrentUrl().wait();
+		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//*[@id=\'products-index\']/header/div[1]/div[2]/div/a")).click();
 		driver.findElement(By.id("product-name")).sendKeys(charSequenceItems[2]);		
 		
@@ -78,5 +79,5 @@ public class Demo {
 	}
 	
 	
-
+	
 }

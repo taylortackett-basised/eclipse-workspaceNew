@@ -66,5 +66,20 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Downloads/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/eclipse-workspaceNew/Introduction/bin/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/taylor.tackett/Desktop/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
