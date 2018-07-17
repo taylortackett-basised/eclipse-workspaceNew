@@ -1,0 +1,26 @@
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//
+////C:\Users\taylor.tackett\Documents\chromedriver.exe
+//
+//public class Demo {
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//// TODO selenium code-
+//		
+//		// Create Driver object for chrome browser
+//		
+//		/* Class name = X
+//				X driver = new X(); */
+//		
+//		// invoke exe file first
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\taylor.tackett\\Documents\\chromedriver.exe");
+//		WebDriver driver = new ChromeDriver();
+//		
+//		driver.get("https://google.com");
+//		System.out.println(driver.getTitle());
+//	
+//	}
+//
+//}

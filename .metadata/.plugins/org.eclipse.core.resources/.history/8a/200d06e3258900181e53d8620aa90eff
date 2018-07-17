@@ -1,0 +1,43 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+//C:\Users\taylor.tackett\Documents\chromedriver.exe
+
+public class Demo {
+	static WebDriver driver = new ChromeDriver();
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		/* Class name = X
+				X driver = new X(); */
+		
+		// invoke exe file first
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\taylor.tackett\\Documents\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		//driver.get("https://google.com");					// set url
+		//System.out.println(driver.getTitle());				// validate Page title
+		
+		// check if url is correct url by printing 
+		//System.out.println(driver.getCurrentUrl());			// validate we landed on correct url
+		
+		// get page source code and print
+		//System.out.println(driver.getPageSource());
+		
+		// check page source for ....
+		
+		
+		driver.get("https://accounts.shopify.com/?rid=12529648-419f-459e-b464-d51b6f5225af");
+		driver.wait();
+		driver.findElement(By.id("account_email")).sendKeys('taylor.tackett@basised.com');
+		
+		driver.get("https://shopify.com");					// update url
+		driver.navigate().back();							// redirect to previous url
+		driver.navigate().forward();						// redirect forward url
+		driver.close();										// close browser
+		//driver.quit();										// closes all broswers opened by selenium
+	}
+
+}

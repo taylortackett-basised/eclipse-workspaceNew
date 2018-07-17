@@ -1,0 +1,18 @@
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+// TODO selenium code-
+		
+		// Create Driver object for chrome browser
+		
+		/* Class name = X
+				X driver = new X(); */
+		
+		WebDriver driver = new ChromeDriver();
+	
+	
+	}
+
+}

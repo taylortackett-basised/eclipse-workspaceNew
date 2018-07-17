@@ -1,0 +1,55 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		/* Class name = X
+				X driver = new X(); */
+		
+		// invoke exe file first
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\taylor.tackett\\Documents\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
+		//WebDriver driver = new ChromeDriver();
+		
+		//driver.get("https://google.com");					// set url
+		//System.out.println(driver.getTitle());				// validate Page title
+		
+		// check if url is correct url by printing 
+		//System.out.println(driver.getCurrentUrl());			// validate we landed on correct url
+		
+		// get page source code and print
+		//System.out.println(driver.getPageSource());
+		
+		// check page source for ....
+		
+		//CharSequence[] emailSequence = StringBuffer("taylor.tackett@basised.com");
+		//CharSequence[] emailSequence = StringBuilder[]("taylor.tackett@basised.com");
+		CharSequence[] emailKey = {"taylor.tackett@basised.com"};
+		CharSequence[] passwordKey = {"password"};
+
+		
+		
+		
+		driver.get("https://basis-ed.myshopify.com/admin/auth/login");
+		
+		driver.findElement(By.id("Login")).sendKeys(emailKey);
+		driver.findElement(By.id("Password")).sendKeys(passwordKey);
+		
+//		driver.get("https://shopify.com");					// update url
+//		driver.navigate().back();							// redirect to previous url
+//		driver.navigate().forward();						// redirect forward url
+		//driver.close();										// close browser
+		//driver.quit();										// closes all broswers opened by selenium
+	}
+
+	private static CharSequence[] StringBuffer(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
